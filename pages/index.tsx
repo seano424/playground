@@ -18,8 +18,8 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className={styles.main}>
-        <h1>hello world</h1>
         <button
+          className='bg-black text-white px-3 py-2 rounded'
           onClick={() =>
             setTest((prevState) => ({
               ...prevState,
