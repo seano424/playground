@@ -1,10 +1,14 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
+import { useAtom } from 'jotai'
+import { testAtom } from '../store'
 import styles from '../styles/Home.module.css'
+import { Test } from '../components/Test'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [{ darkmode }, setTest] = useAtom(testAtom)
   return (
     <>
       <Head>
@@ -15,8 +19,18 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1>hello world</h1>
-        <h2>hello again</h2>
-        <mark>I am a mark!</mark>
+        <button
+          onClick={() =>
+            setTest((prevState) => ({
+              ...prevState,
+              darkmode: !prevState.darkmode,
+            }))
+          }
+        >
+          Toggle Global Theme
+        </button>
+        <p>{darkmode ? 'dark' : 'light'}</p>
+        <Test />
       </main>
     </>
   )
