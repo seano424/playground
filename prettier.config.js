@@ -6,4 +6,5 @@ module.exports = {
   useTabs: false,
   htmlWhitespaceSensitivity: 'ignore',
   tailwindConfig: './tailwind.config.js',
+  plugins: [require('prettier-plugin-tailwindcss')],
 }
