@@ -1,4 +1,5 @@
 @import './utilities.pcss';
+@import './components.pcss';
 
 @tailwind base;
 @tailwind components;
