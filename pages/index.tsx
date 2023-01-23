@@ -4,6 +4,7 @@ import { useAtom } from 'jotai'
 import { testAtom } from '../store'
 import clsx from 'clsx'
 import Test from '../components/Test'
+import Text from '../components/Text'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,6 +34,10 @@ export default function Home() {
           <p>state: {darkmode ? 'dark' : 'light'}</p>
         </div>
         <Test />
+        <Text
+          className="text-9xl font-black"
+          content="hello world hi there world are"
+        />
       </main>
       <footer className="mt-auto flex justify-center gap-3">
         <p>hello</p>
