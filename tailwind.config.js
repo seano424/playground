@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,7 +11,15 @@ module.exports = {
       padding: '2rem',
       center: true,
     },
-    extend: {},
+    extend: {
+      colors: {
+        brand: {
+          light: colors.blue[100],
+          DEFAULT: colors.blue[500],
+          dark: colors.blue[700],
+        },
+      },
+    },
   },
   plugins: [],
 }

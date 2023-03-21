@@ -4,3 +4,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wrapper {
+  border: 10px solid aqua;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.square {
+  aspect-ratio: 1/1;
+  border: 10px solid powderblue;
+}
